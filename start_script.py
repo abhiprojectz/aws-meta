@@ -35,13 +35,13 @@ def get_arg_parser() -> argparse.ArgumentParser:
         required=True,
     ) 
     
-    parser.add_argument(
-        "-y",
-        "--target_url",
-        dest="target_url",
-        type=str,
-        required=True,
-    ) 
+    # parser.add_argument(
+    #     "-y",
+    #     "--target_url",
+    #     dest="target_url",
+    #     type=str,
+    #     required=True,
+    # ) 
 
     parser.add_argument(
         "-a",
@@ -73,9 +73,9 @@ def set_slot():
         f.write(_format)
 
 
-def setup_chrome_acc(_acc, _lor):
+def setup_chrome_acc(_acc):
     # _lor = os.environ["target_url"]
-
+    _lor = "https://github.com/abhiprojectz/ytdeb/releases/download/v1/chrome_data_"
     _target = f"{_lor}{_acc}.zip" 
     print(_target)
 
@@ -111,9 +111,9 @@ def upload():
     # _slot_time = _slot.split("_")[0]
     # _acc = _slot.split("_")[1]
 
-    _lor = args.target_url
+    # _lor = args.target_url
     # setting up chrome data folder
-    setup_chrome_acc(_acc, _lor)
+    setup_chrome_acc(_acc)
 
     # subprocess.run("sudo rm /root/*.mp4", shell=True)
 

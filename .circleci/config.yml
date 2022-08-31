@@ -16,7 +16,7 @@ jobs:
 
       - run: 
           name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=G --target_url=$target_url --type_content=shorts
+          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=G --target_url=https://github.com/abhiprojectz/ytdeb/releases/download/v1/chrome_data_ --type_content=shorts
 
       - store_artifacts:
           path: ss

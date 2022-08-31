@@ -265,7 +265,7 @@ def get_bg_music():
     _bg_m_path = random.choice(bg_m)
     subprocess.call(f"wget {_bg_m_path}", shell=True)
 
-    f = os.path.join(dir_path, _bg_m_path.split("/")[-1])
+    f = os.path.join("/home/circleci/project", _bg_m_path.split("/")[-1])
     return f
 
 def generateVedio(_audio, is_short, is_riddle, is_motivation, _msg):

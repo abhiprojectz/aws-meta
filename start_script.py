@@ -75,6 +75,7 @@ def set_slot():
 
 def setup_chrome_acc(_acc, _lor):
     # _lor = os.environ["target_url"]
+    print(_lor)
     _target = f"{_lor}{_acc}.zip" 
 
     subprocess.run(f"sudo wget --directory-prefix=/home/circleci/project/ {_target}", shell=True)

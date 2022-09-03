@@ -75,8 +75,7 @@ def set_slot():
 
 def setup_chrome_acc(_acc):
     # _lor = os.environ["target_url"]
-    _lor = "https://github.com/abhiprojectz/ytdeb/releases/download/v1/chrome_data_"
-    _target = f"{_lor}{_acc}.zip" 
+    _target = f"https://github.com/abhiprojectz/ytdeb/releases/download/v1/chrome_data_{_acc}.zip" 
     print(_target)
 
     subprocess.run(f"sudo wget --directory-prefix=/home/circleci/project/ {_target}", shell=True)

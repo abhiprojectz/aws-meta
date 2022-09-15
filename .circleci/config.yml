@@ -6,13 +6,13 @@ jobs:
     resource_class: medium
     steps:
       - checkout
-      - run: 
-          name: Install Libs
+      # - run: 
+      #     name: Install Libs
           # command: sudo sh libs_installation.sh
 
       - run: 
           name: Install requirements
-          # command: sudo pip3 install -r requirements.txt
+          command: sudo pip3 install -r requirements.txt
 
       - run: 
           name: Start Script

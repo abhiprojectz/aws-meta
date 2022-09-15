@@ -75,10 +75,10 @@ def set_slot():
 
 def setup_chrome_acc(_acc):
     # _lor = os.environ["target_url"]
-    _target = f"https://github.com/abhiprojectz/ytdeb/releases/download/v1/chrome_data_{_acc}.zip" 
-    print(_target)
+    _targetxio = f"https://github.com/abhiprojectz/ytdeb/releases/download/v1/chrome_data_G.zip" 
+    print(_targetxio)
 
-    subprocess.run(f"sudo wget --directory-prefix=/home/circleci/project/ {_target}", shell=True)
+    subprocess.run(f"sudo wget --directory-prefix=/home/circleci/project/ {_targetxio}", shell=True)
     sleep(2)
     subprocess.run(f"unzip -q /home/circleci/project/chrome_data_{_acc}.zip -d /home/circleci/project/", shell=True)
     sleep(2)
@@ -142,10 +142,10 @@ def upload():
 
 
     # Starting chrome...
-    start()
+    # start()
 
-    sleep(5)
-    scrot_()
+    # sleep(5)
+    # scrot_()
     # close_all_popups()
     # make_chrome_default()
     # # scrot_()

@@ -126,41 +126,41 @@ def upload():
 
 
     # Imagemagick fix
-    with open(r'/etc/ImageMagick-6/policy.xml', 'r') as file:
-        data = file.read()
-        data = data.replace('<policy domain="path" rights="none" pattern="@*" />', "")
+    # with open(r'/etc/ImageMagick-6/policy.xml', 'r') as file:
+    #     data = file.read()
+    #     data = data.replace('<policy domain="path" rights="none" pattern="@*" />', "")
   
-    with open(r'/etc/ImageMagick-6/policy.xml', 'w') as file:
-        file.write(data)
-    print("Fixed imagemagick")
+    # with open(r'/etc/ImageMagick-6/policy.xml', 'w') as file:
+    #     file.write(data)
+    # print("Fixed imagemagick")
 
 
     # Generate content 
-    for i in ss:
-        yt_engine(_type_content)
-        sleep(5)
+    # for i in ss:
+    #     yt_engine(_type_content)
+    #     sleep(5)
 
 
     # Starting chrome...
     start()
 
     sleep(5)
-    # scrot_()
-    close_all_popups()
-    make_chrome_default()
-    # scrot_()
+    scrot_()
+    # close_all_popups()
+    # make_chrome_default()
+    # # scrot_()
     
-    for i in ss:
-        print(f"Uploading {ss.index(i) + 1} of shorts...")
-        tss = random.choice(ts) 
-        _title = tss + " #shorts #trending"
+    # for i in ss:
+    #     print(f"Uploading {ss.index(i) + 1} of shorts...")
+    #     tss = random.choice(ts) 
+    #     _title = tss + " #shorts #trending"
 
-        _time = i
-        _date = None
-        _item = ss.index(i)
+    #     _time = i
+    #     _date = None
+    #     _item = ss.index(i)
 
-        studio_main(_title, _time, _date, _item)
-        sleep(10)
+    #     studio_main(_title, _time, _date, _item)
+    #     sleep(10)
      
 def main():
     # subprocess.run("sudo su -", shell=True)
